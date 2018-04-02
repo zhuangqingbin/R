@@ -1,0 +1,103 @@
+---
+title: "R in action"
+author: "zhuang"
+date: "2016年3月5日"
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex 
+    keep_tex: yes
+    latex_engine: xelatex
+    number_sections: no
+    toc: yes
+  html_document: default
+  word_document: default
+---
+header.tex 应保存在工作目录，且用winedt编辑
+两个空格或者空一行表示换行  
+keep.tex 控制是否一起生成tex文件  
+number_sections 控制是否生成标题前的标号  
+toc 控制是否生成目录  
+#一级标题  
+##二级标题  
+###三级标题  
+####四级标题  
+语法：  
+幂运算：$a^2 + b^2 = c^2$
+上标：$a^{x^2+y^2}=c$
+下标：$a_{x^2+y^2} = d$
+头上点：$\dot{d}$
+头上两点：$\ddot{a}$
+头上长横线：$\overline{d}$
+下面长横线：$\underline{d}$
+头上箭号：$\vec{a}$
+头上下半圆：$\breve{a}$
+头上长波浪：$\widetilde{a}$
+头上短波浪：$\tilde{a}$
+头上尖号：$\hat{a}$
+头上长尖号：$\widehat{a}$
+头上第一声：$\bar{a}$
+头上第二声：$\acute{a}$
+头上第三声：$\check{a}$
+头上第四声：$\grave{a}$
+
+化学元素：$^{16}O^{2-}_{32}$
+
+
+\begin{equation}
+\begin{split}
+\bar{\textbf{z}}&=E\left(\textbf{z}\right)\\
+&=E[\Sigma^{-1/2}(\bar{\textbf{y}}-\mu)]\\
+&=\Sigma^{-1/2} E(\bar{\textbf{y}}-\mu)\\
+&=\Sigma^{-1/2}(\mu-\mu)\\
+&=\bar{\textbf{0}}
+\nonumber
+\end{split}
+\end{equation}
+
+关于下标：$y_N$ $y_{_N}$ 行内的分式：$\frac{x+y}{y+z}$ 
+行间的分式：\[\frac{x+y}{y+z}\]
+多个分式相加:
+\begin{displaymath}
+        x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
+\end{displaymath}
+开根号：$\sqrt{2}$   
+行间的：\[\sum_{k=1}^\infty \frac{x^n}{n!} =\int_0 ^\infty e^x\]
+根号的修整： \[\sqrt{a}+\sqrt{b}+\sqrt{c},\qquad\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}\]  
+当被开方表达式较高时，开方次数的位置显得略低，解决办法为：将开方次数改为上标，并拉近与根式的水平距离，
+\begin{eqnarray}
+\sqrt{1+\sqrt[p]{1+\sqrt[q]{1+a}}}\\
+\sqrt{1+\sqrt[^p\!]{1+\sqrt[^q\!]{1+a}}}
+\end{eqnarray}
+
+\begin{eqnarray}
+\sqrt{1+\sqrt[p]{1+\sqrt[q]{1+a}}}\\
+\sqrt{1+\sqrt[^p\!]{1+\sqrt[^q\!]{1+a}}}
+\end{eqnarray}
+
+求和命令：$\sum_{k=1}^n$ 
+无穷级数:$\sum_{k=1}^\infty \frac{x^n}{n!}$
+积分$\int_0^\infty e^x$
+
+上划线命令：$\overline{公式}$  
+下划线命令：$\underline{公式}$  
+$\overline{\overline{a^2}+\underline{ab}+\bar{a}^3}$  
+上花括弧命令：$\overbrace{公式}^{说明}$  
+下花括弧命令：$\underbrace{公式}_{说明}$
+\[\underbrace{a+\overbrace{b+\dots+b}^{m\mbox{\scriptsize 个}}+c}_{20\mbox{\scriptsize 个}}\]
+
+
+\begin{eqnarray*}
+\vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}\\
+{n+1 \choose k}={n \choose k}+{n \choose k-1}\\
+\sum_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_{k_0}A_{k_1}\cdots
+\end{eqnarray*}
+
+\[
+()
+\big(\big)
+\Big(\Big)
+\bigg(\bigg)
+\Bigg(\Bigg)
+\]
+
